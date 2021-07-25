@@ -72,9 +72,9 @@ impl Protocol {
                     };
 
                     match option_name {
-                        "cookies" => protocol.cookies = option_value.to_string(),
-                        "downloader" => protocol.downloader = option_value.to_string(),
-                        "quality" => protocol.quality = option_value.to_string(),
+                        "c" | "cookies" => protocol.cookies = option_value.to_string(),
+                        "d" | "downloader" => protocol.downloader = option_value.to_string(),
+                        "q" | "quality" => protocol.quality = option_value.to_string(),
                         _ => return Err(ProtocolError::WrongProtocol),
                     }
                 }
