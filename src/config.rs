@@ -270,6 +270,8 @@ fn merge_downloader(d: &mut Downloader, c: CustomDownloader) {
     }
     if let Some(v) = c.play_mode {
         d.play_mode = v;
+    } else {
+        d.play_mode = Config::default_play_mode();
     }
     if let Some(v) = c.options {
         d.options = v;
