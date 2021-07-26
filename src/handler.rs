@@ -119,9 +119,6 @@ impl Handler {
             downloader_options.push(option);
         }
 
-        dbg!(&downloader);
-        dbg!(&downloader_options);
-
         // Choose downloader play mode
         let play_mode = downloader.play_mode()?;
         let bin = downloader.bin(&self.protocol.downloader)?;
